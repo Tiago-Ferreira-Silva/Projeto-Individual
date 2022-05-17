@@ -42,18 +42,18 @@
  <div class="container">
         <div class="card">
             <div class="formulario">
-                Nome: 
+                <span class="vermelho">Nome :</span>
                 <input type="text" placeholder="seuNome" id="input_nome" onblur="validarNome()">        
                 <div class="erro" style="display: none ;" id="erro1" ><P id="mensagem_erro"  ></P> </div>
                 <div class="erroCadastro" style="display: none ;" id="erro0" ><P id="erroCadastro"  ></P> </div>
-                E-mail:
+                <span class="vermelho">E-mail:</span>
                 <input type="text" placeholder="Email@gmail.com" id="input_gmail" onblur="validarEmail()">
                 <div class="erro" style="display: none ;" id="erro2" ><P id="erroEmail"  ></P> </div>
-                Telefone:
+                <span class="vermelho">Telefone:</span>
                 <input type="text " placeholder="1191234567" id="input_telefone">
-                Senha :
+                <span class="vermelho">Senha :</span>
                 <input type="text" placeholder="**********" id="input_senha">
-                Confirma Senha :
+                <span class="vermelho">Confirma Senha :</span>
                 <input type="text" placeholder="**********" id="input_confirmaSenha">
                 <div class="box">
                     <button class="btn" onclick="cadastrar()">Cadastra</button>
