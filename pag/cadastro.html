@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="/style/cadastro.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E >
+    <link rel="stylesheet" href="../style/cadastro.css">
+    <script src="./validacao.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" >
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Nosifer&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
 </head>
 
 <body>
@@ -39,22 +40,23 @@
 <div class="banner"> 
     <h1 class="vermelho">Junte-se as nos !!</h1>
  <div class="container">
-    
         <div class="card">
             <div class="formulario">
-                Nome:
-                <input type="text" placeholder="seuNome">
+                Nome: 
+                <input type="text" placeholder="seuNome" id="input_nome" onblur="validarNome()">        
+                <div class="erro" style="display: none ;" id="erro1" ><P id="mensagem_erro"  ></P> </div>
+                <div class="erroCadastro" style="display: none ;" id="erro0" ><P id="erroCadastro"  ></P> </div>
                 E-mail:
-                <input type="text" placeholder="Email@gmail.com">
+                <input type="text" placeholder="Email@gmail.com" id="input_gmail" onblur="validarEmail()">
+                <div class="erro" style="display: none ;" id="erro2" ><P id="erroEmail"  ></P> </div>
                 Telefone:
-                <input type="text " placeholder="1191234567">
+                <input type="text " placeholder="1191234567" id="input_telefone">
                 Senha :
-                <input type="text" placeholder="**********">
+                <input type="text" placeholder="**********" id="input_senha">
                 Confirma Senha :
-                <input type="text" placeholder="**********">
+                <input type="text" placeholder="**********" id="input_confirmaSenha">
                 <div class="box">
-                    <button class="btn" onclick=""><a href="cadastro.html" >Cadastra</a></button>
-                    <button class="btn" onclick=""><a href="long.html">Entra</a></button>
+                    <button class="btn" onclick="cadastrar()">Cadastra</button>
                 </div>
             </div>
         </div>
