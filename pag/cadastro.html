@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/cadastro.css">
-    <script src="./validacao.js"></script>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="./js/validacao.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" >
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Nosifer&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
                     <li><a href="index.html"class="vermelho">Home</a></li>
                     <li><a href="filmes.html"class="vermelho">Filmes</a> </li>
                     <li ><a href="cadastro.html" class="borda">Cadastro</a></li>
-                    <li><a href="long.html"class="vermelho">Login</a></li>
+                    <li><a href="login.html"class="vermelho">Login</a></li>
                 </ul>
             </div>
             <img src="https://media4.giphy.com/media/hvLjmIbptd5dOZeHQC/giphy.gif" alt="">
@@ -42,19 +42,28 @@
  <div class="container">
         <div class="card">
             <div class="formulario">
+
+                <div class="erro" style="display: none ;" id="erroCadastro" ><P id="erroCadastro" ></P> </div>
+
                 <span class="vermelho">Nome :</span>
-                <input type="text" placeholder="seuNome" id="input_nome" onblur="validarNome()">        
-                <div class="erro" style="display: none ;" id="erro1" ><P id="mensagem_erro"  ></P> </div>
-                <div class="erroCadastro" style="display: none ;" id="erro0" ><P id="erroCadastro"  ></P> </div>
+                <input type="text" placeholder="SeuNome" id="input_nome" onblur="validar()">     
+                <div class="erro" style="display: none ;" id="erroNome1" ><P id="erroNome"  ></P> </div>
+             
                 <span class="vermelho">E-mail:</span>
-                <input type="text" placeholder="Email@gmail.com" id="input_gmail" onblur="validarEmail()">
+                <input type="text" placeholder="Email@gmail.com" id="email_input" onblur="validarEmail()">
                 <div class="erro" style="display: none ;" id="erro2" ><P id="erroEmail"  ></P> </div>
+
                 <span class="vermelho">Telefone:</span>
                 <input type="text " placeholder="1191234567" id="input_telefone">
+
                 <span class="vermelho">Senha :</span>
-                <input type="text" placeholder="**********" id="input_senha">
+                <input type="text" placeholder="**********" id="input_senha" onblur="validarSenha()">
+                <div class="erro" style="display: none ;" id="erro3" ><P id="erroSenha"  ></P> </div>
+
                 <span class="vermelho">Confirma Senha :</span>
-                <input type="text" placeholder="**********" id="input_confirmaSenha">
+                <input type="text" placeholder="**********" id="input_ConfirmaSenha" onblur="ConfirmaSenha()">
+                <div class="erro" style="display: none ;" id="erro4" ><P id="ConfirmaErroSenha"  ></P> </div>
+
                 <div class="box">
                     <button class="btn" onclick="cadastrar()">Cadastra</button>
                 </div>
@@ -62,6 +71,7 @@
         </div>
 </div>
 </div>
+
     <div class="footer">
         <div class="container">
             <h3 > <span class="vermelho" >Nitght of Terror &copy;</span> </h3>
@@ -70,3 +80,4 @@
 </body>
 
 </html>
+

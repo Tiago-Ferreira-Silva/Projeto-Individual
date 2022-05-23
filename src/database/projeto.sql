@@ -12,6 +12,7 @@ create table usuario (
 IdUsuario int primary key auto_increment,
 nome varchar(45),
 email varchar(45), 
+senha varchar(45),
 filme varchar(45)
 );
 create table critica(

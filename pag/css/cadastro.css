@@ -36,14 +36,7 @@ img{
   overflow: hidden;
   border-radius: 9px;
 }
-input{
-    border-radius: 4px;
-    height: 40px;
-    width: 350px;
-    align-items: center;
-    margin-top: 10px;
-    color: black;
-  }
+
 /*header*/
 .container{
     width: 100%;
@@ -52,8 +45,9 @@ input{
 }
 .banner{
     margin-top: 100px;
-    margin-bottom: -200px;
+    
 }
+
 .header .container{
       display: flex;
       justify-content: space-between;
@@ -95,10 +89,7 @@ input{
     gap: 56px;
     color: red;
  }
-.vermelho:hover{
-    transition: all 1.5s;
-    color: red;  
-}
+
 .container h1  {
     display: flex;
     flex-direction: column;
@@ -119,7 +110,7 @@ input{
     height: 500px;
     color: white; 
     margin-top: 100px;  
-}
+} 
 .banner h1{
     display: flex;
     align-items: center;
@@ -128,40 +119,89 @@ input{
     margin-bottom: 200px;
     font-size: 80px;
 }
-.formulario_long{
+.img{
+    width: 300px;
+    height: 500px;
+    color: rgb(255, 254, 253);
+    -webkit-transition: -webkit-transform .5s ease ;
+     transition: transform .5s ease ; 
+}
+.img :hover{
+    -webkit-transform: scale(1.2);
+     transform: scale(1.2);
+}
+.img70{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -110px;
+}
+.filme{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+    
+}
+.filme:hover{
+    transition: all 1.5s;
+    color: red;
+    border-bottom: red solid;
+}
+
+.vermelho:hover{
+    transition: all 1.5s;
+    color: red;  
+}
+input{
+    border-radius: 4px;
+    height: 35px;
+    width: 350px;
+    align-items: center;
+    margin-top: 10px;
+    color: black;
+  }
+.formulario  {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: red;
-    background-color: rgba(0, 0, 0, 0.266);
-    border-radius: 10px;
-    height: 600px;
+    height: 760px;
     width: 500px;
     padding: 5px;
-    gap: 40px;
-    font-size: 37px;
-    margin-top: -540px;
-}
-.card_long{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 50px;
-    margin-top: 200px;
-}
-.box{
-    display: flex;
-    justify-content: center;
     gap: 10px;
-    
-    
+    font-size: 35px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.764);
+    border-radius: 30px;
+    margin-bottom: 230px;
+    margin-top: 40px;
+    background-image: url(https://i.gifer.com/embedded/download/I3uQ.gif);
 }
-.margLong{
-    height: 80px;
+.erro{
+    
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 400px;
+    font-size: 30px;
+    margin-top: -20px;
+    align-items: center;
+    margin-left: 900px;
+    
+   
 }
+.erroCadastro{
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 400px;
+    font-size: 30px;
+    margin-top: -60px;
+    align-items: center;
+    margin-left: 800px;
+}
+
 .btn   {
     align-items: center; 
     height: 50px;
@@ -171,19 +211,21 @@ input{
     font-size: 20px; 
     margin-top: 15px;
     background-color: red;
+    color: white;
 }
 .btn:hover{
     transform: scale(1.1);
     transition: all 1.5s;
     background-color: #000000;    
 }
+
   /*footer*/
 .footer .container h3 {
     background-color: rgb(0, 0, 0);
     color: white;
-    height: 200px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;  
-}
+    margin-top: 100px;  
+  }
