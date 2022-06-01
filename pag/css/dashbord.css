@@ -3,22 +3,16 @@ body {
     padding: 0px;
     overflow-x: hidden;
     font-family: 'Nosifer', cursive;
+    background-image: url(https://1.bp.blogspot.com/-iVUIFGRk9ec/WKiLQ13JweI/AAAAAAAABNw/BWqECiwE5REuR5LPsmu6jgg9FJ-AuZdqwCLcB/s1600/gif%2Bde%2Bterror%2B5.gif)  ;
 }
 
-/*header*/
-.container .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    height: 100vh;
-    width: 300px;
-    background-color: #000000;
-    
-    
-    
+
+a{
+    text-decoration: none;
+    color: red;
 }
+/*header*/
+z
 h1 {
     display: flex;
     flex-direction: column;
@@ -36,6 +30,11 @@ h2{
     justify-content: center;
     text-align: center;
     font-size: 35px;
+}
+img{
+    position: relative; 
+    height: 30vh;
+    width: 300px;
 }
 .cliente {
     display: flex;
@@ -84,6 +83,7 @@ h2{
     transform: scale(1.1);
     transition: all 1.5s;
     background-color: red;
+    color: white;
 }
 
 .vermelho:hover {
@@ -106,7 +106,7 @@ h2{
     width: 75%;
     position: relative;
     margin-left: 300px;
-    background-image: url(https://1.bp.blogspot.com/-iVUIFGRk9ec/WKiLQ13JweI/AAAAAAAABNw/BWqECiwE5REuR5LPsmu6jgg9FJ-AuZdqwCLcB/s1600/gif%2Bde%2Bterror%2B5.gif);
+  
     margin-top: -800px;
     width: 95%;
     display: flex;
@@ -114,6 +114,28 @@ h2{
     align-items: center;
     justify-content: space-around;
     height: 100vh;
+}
+ .navbar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+    width: 300px;
+    background-color: #000000;  
+    
+}
+.menu{
+    position: fixed;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    width: 300px;
+    background-color: #000000; 
+    
 }
 .classico {
     width: 300px;
@@ -133,21 +155,41 @@ h2{
 }
 .box{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     margin-top: -440px;
     margin-left: 370px;
     width: 75%;
-    height: 400px;
+    height: 800px;
     border-radius: 10px;
     border: solid teal;
     color:red;
-    background-color:rgba(13, 13, 13, 0.729);
-    
+    background-color:rgba(13, 13, 13, 0.729);  
 }
-img{
-    position: relative; 
-    height: 30vh;
-    width: 300px;
+.imagem img {
+    height: 490px;
+    width: 360px;
+    border-radius: 10px;
+     -webkit-transition: -webkit-transform .5s ease ;
+     transition: transform .5s ease ; 
+    border: solid gold;
+}
+
+.imagem :hover{
+    -webkit-transform: scale(1.2);
+     transform: scale(1.2);
+}
+.filme{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;  
+    color: white;
+}
+.filme:hover{
+    transition: all 1.5s;
+    color: red;
+    border-bottom: red solid;
 }

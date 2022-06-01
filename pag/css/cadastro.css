@@ -36,6 +36,36 @@ img{
   overflow: hidden;
   border-radius: 9px;
 }
+input{
+    border-radius: 4px;
+    height: 35px;
+    width: 350px;
+    align-items: center;
+    margin-top: 10px;
+    color: black;
+    font-size: 20px;
+  }
+select{
+    width: 400px;
+    height: 40px;
+    color: red;
+    font-size: 20px;
+}
+option{
+    font-size: 20px;
+    color: red;
+}
+p{
+    margin-left: 50px;
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border: solid gold;
+    height: 200px;
+    width: 600px;
+
+}
 
 /*header*/
 .container{
@@ -155,14 +185,20 @@ img{
     transition: all 1.5s;
     color: red;  
 }
-input{
-    border-radius: 4px;
-    height: 35px;
-    width: 350px;
+.verde{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    color: black;
-  }
+    margin-top: 6px; 
+}
+.verde:hover{
+    transition: all 0.5s;
+    color: green;
+    align-items: center;
+
+}
+
 .formulario  {
     display: flex;
     justify-content: center;
