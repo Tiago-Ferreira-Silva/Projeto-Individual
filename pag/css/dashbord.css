@@ -12,7 +12,7 @@ a{
     color: red;
 }
 /*header*/
-z
+
 h1 {
     display: flex;
     flex-direction: column;
@@ -20,8 +20,9 @@ h1 {
     justify-content: center;
     font-size: 35px;
     text-align: center;
-    margin-top: -10px;
-    margin-bottom: 200px;
+    margin-top: -80px;
+    margin-bottom: 100px;
+    
 }
 h2{
     display: flex;
@@ -35,7 +36,18 @@ img{
     position: relative; 
     height: 30vh;
     width: 300px;
+    margin-bottom: 100px;
 }
+span{
+    font-size: 30px;
+    color: white;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
 .cliente {
     display: flex;
     flex-direction: column;
@@ -44,8 +56,8 @@ img{
     text-align: center;
     position: relative;
     font-size: 25px;
-    margin-top: -150px;
-    margin-bottom: 70px;
+    margin-top: 100px;
+    
 }.btn {
     align-items: center;
     height: 50px;
@@ -53,7 +65,8 @@ img{
     border-radius: 10px;
     border: solid rgb(147, 147, 147);
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: -80px;
+    margin-bottom: 25px;
     margin-left: 30px;
     background-color: white;
     color: red;
@@ -73,8 +86,8 @@ img{
     border-radius: 10px;
     border: solid rgb(3, 3, 3);
     font-size: 20px;
-    margin-top: 15px;
     margin-left: 80px;
+    margin-top: -17px;
     background-color: white;
     color: red;
 }
@@ -87,7 +100,6 @@ img{
 }
 
 .vermelho:hover {
-    transition: all 1.5s;
     color: red;
 }
 
@@ -135,6 +147,8 @@ img{
     height: 100vh;
     width: 300px;
     background-color: #000000; 
+    padding: 20PX;
+    
     
 }
 .classico {
@@ -156,30 +170,35 @@ img{
 .box{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: relative;
     margin-top: -440px;
-    margin-left: 370px;
+    margin-left: 350px;
     width: 75%;
     height: 800px;
     border-radius: 10px;
-    border: solid teal;
-    color:red;
+    display: flex;
     background-color:rgba(13, 13, 13, 0.729);  
+}
+.box span{
+
+    margin-top: -300px;
+    margin-left: 400px;
+    width: 800px;
+    font-size: 33px;
+    
 }
 .imagem img {
     height: 490px;
     width: 360px;
     border-radius: 10px;
-     -webkit-transition: -webkit-transform .5s ease ;
-     transition: transform .5s ease ; 
-    border: solid gold;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: -360px;
+    margin-left: 20px;
 }
 
-.imagem :hover{
-    -webkit-transform: scale(1.2);
-     transform: scale(1.2);
-}
+
 .filme{
     font-size: 25px;
     display: flex;

@@ -65,6 +65,12 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var Slasher =req.body.SlasherServer;
+    var Alien = req.body.AlienServer;
+    var Trash =req.body.trashServer;
+    var Fantasma =req.body.FantasmaServer;
+    var Zumbi =req.body. ZumbiServer;
+
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -73,10 +79,20 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else {
+    } else if (Slasher == undefined) {
+        res.status(400).send("Seu filme está undefined!");
+    } else if (Alien == undefined) {
+        res.status(400).send("Seu filme está undefined!");
+    }else if (Trash == undefined) {
+        res.status(400).send("Seu filme está undefined!");
+    }else if (Fantasma == undefined) {
+        res.status(400).send("Seu filme está undefined!");
+    }else if (Zumbi == undefined) {
+        res.status(400).send("Seu filme está undefined!");
+    } else  {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha, Slasher, Alien, Trash, Fantasma, Zumbi )
             .then(
                 function (resultado) {
                     res.json(resultado);

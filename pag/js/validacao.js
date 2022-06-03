@@ -31,8 +31,8 @@ function validarSenha() {
     erro3.style.display = ""
     erroSenha.innerHTML = " senha invalida";
     erroSenha.style.color = "red"
-
-  } else if (senha.length < 8) {
+  } 
+   if (senha.length < 8) {
     input_senha.style.border = "red  solid 5px"
     erro3.style.display = ""
     erroSenha.innerHTML = " senha fraca ";
@@ -51,20 +51,10 @@ function ConfirmaSenha() {
 
   if (confirmarSenha == '') {
     input_ConfirmaSenha.style.border = "red  solid 5px"
-    erro4.style.display = ""
+    erro5.style.display = ""
     ConfirmaErroSenha.innerHTML = " senha invalida";
     ConfirmaErroSenha.style.color = "red"
-  } else if (confirmarSenha.length < 8) {
-    input_ConfirmaSenha.style.border = "red  solid 5px"
-    erro4.style.display = ""
-    ConfirmaErroSenha.innerHTML = " senha fraca ";
-    ConfirmaErroSenha.style.color = "red"
-  } else if (confirmarSenha.length >= 8) {
-    input_ConfirmaSenha.style.border = ""
-    erro4.style.display = ""
-    ConfirmaErroSenha.innerHTML = "";
-    ConfirmaErroSenha.style.color = ""
-  }
+  } 
   if (senha != confirmarSenha) {
     input_ConfirmaSenha.style.border = "red  solid 5px"
     erro4.style.display = ""
@@ -80,60 +70,59 @@ function ConfirmaSenha() {
     return false;
   }
 }
-
-
-
-
-
-function proximo() {
-
+function proximo(){
   var nome = input_nome.value;
   var email = email_input.value;
   var senha = input_senha.value;
   var confirmaSenha = input_ConfirmaSenha.value;
 
   if (nome == "" && email == "" && senha == "" && confirmaSenha == "") {
-    erroCadastro.innerHTML = "Mensagem de erro para todos os campos em branco";
+    // alert("preencha os campos")
+      Swal.fire({
+      icon: 'error',
+      title: 'erro no cadastro',
+      text: 'Campos em branco',
+      color: 'red',
+      color: 'red',
+      background: 'black',
+      width: 450,
+      height:450,
+      
+    })
+
     input_nome.style.border = "red  solid 5px"
     email_input.style.border = "red  solid 5px"
     input_senha.style.border = "red  solid 5px"
     input_ConfirmaSenha.style.border = "red  solid 5px"
-    erroNome1.style.display = ""
-    erroNome1.style.color = "red"
-  } else {
-      formulario1.style.display = 'none'
-      formularioFIlme.style.display = ''
-    }
+
+  }else {
+    
+  formularioFIlme.style.display = "";
+  formulario1.style.display = "none"
   }
+}
 
 
 
 function cadastro() {
-
-
+    
+  
   var nome = input_nome.value;
   var email = email_input.value;
   var senha = input_senha.value;
-  var confirmaSenha = input_ConfirmaSenha.value;
-  var filme_Slasher = Slasher.value;
-  var filme_Alien = Alien.value;
-  var filme_Trash =  Trash.value;
-  var filme_Fantasma = Fantasma.value;
-  var filme_Zumbi = Zumbi.value;
+  var Slasherfilme = Slasher.value;
+  var Alienfilme = Alien.value;
+  var Trashfilme = Trash.value;
+  var Fantasmafilme = Fantasma.value;
+  var Zumbifilme = Zumbi.value;
 
+ 
 
-  if (nome == "" && email == "" && senha == "" && confirmaSenha == "" &&
-    filme_Slasher == "" && filme_Alien == "" && filme_Trash == "" && filme_Fantasma == "" && filme_Zumbi =="" ) {
-      
-    Slasher.style.border = "red  solid 5px"
-    Alien.style.border = "red solid 5px"
-    Trash.style.border = "red solid 5px"
-    Zumbi.style.border = "red solid 5px"
-    Fantasma.style.border = "red solid 5px"
-    erroCadastroFilme.innerHTML = "escolha 1 filme"
-    erroCadastroFilme.style.border = "red solid 5px"
-
-
+  if (nome == ""  && email == "" && senha == "" &&  Slasherfilme == "" && Alienfilme == "" && Trashfilme == "" && Fantasmafilme == "" && Zumbifilme == "") {
+    
+    
+   
+  
     return false;
   } else {
 
@@ -144,10 +133,17 @@ function cadastro() {
       },
       body: JSON.stringify({
 
-
         nomeServer: nome,
-        emailServer: email,
-        senhaServer: senha
+        emailServer: email, 
+        senhaServer: senha,
+      
+
+        SlasherServer: Slasherfilme,
+        AlienServer: Alienfilme,
+        trashServer: Trashfilme,
+        FantasmaServer: Fantasmafilme,
+        ZumbiServer: Zumbifilme,
+
 
       }),
     })
@@ -160,7 +156,18 @@ function cadastro() {
           }, "2000")
 
         } else {
-
+          Swal.fire({
+            icon: 'error',
+            title: 'erro',
+            text: 'escolha pelo menos 1 filme',
+            color: 'red',
+            color: 'red',
+            background: 'black',
+            width: 450,
+            height:450,
+            
+          })
+         
           // alert('Houve um erro ao realizar o cadastro');
           throw 'Houve um erro ao tentar realizar o cadastro!';
         }
@@ -171,16 +178,38 @@ function cadastro() {
       });
     return false;
   }
+
 }
 
-
-  function  Filmes(){
+  function  FilmeSlasher(){
     Slasher.style.display = ''
-    divContainer.style.display = 'none'
-    
+    divContainer.style.display = 'none'  
   }
-  function Filmes2(){
+  function slasher(){
     Slasher.style.display = 'none'
     divContainer.style.display = ''
-
   }
+  function filmesTrash(){
+    filmeTrash.style.display = 'none'
+    trashProximo.style.display = ''
+  }
+  function trash() {
+    filmeTrash.style.display = ''
+    trashProximo.style.display = 'none'
+  }
+  function FilmesFantasma(){
+    filmeFantasma.style.display = 'none'
+    fantasmaProximo.style.display = ''
+  }
+  function fantasma(){
+    filmeFantasma.style.display = ''
+    fantasmaProximo.style.display = 'none'
+  }
+  function Filmeszumbi(){
+    filmeZumbi.style.display = 'none'
+    proximozumbi.style.display = ''
+  }
+ function zumbi(){
+  filmeZumbi.style.display = ''
+  proximozumbi.style.display = 'none'
+ }

@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" >
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Nosifer&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Cadastro</title>
 </head>
 
@@ -39,11 +40,13 @@
 </div>
 <div class="banner"> 
     <h1 class="vermelho">Junte-se as nos !!</h1>
+    
  <div class="container"> 
+   
         <div class="card">
-            <div class="erro" style="display: none ;" id="erro3" ><P id="erroCadastro" ></P> </div>
-            <div class="formulario" id="formulario1">
-                
+            
+            <div class="formulario" id="formulario1" style="display: none ;">
+                <div class="erro" id="erro6" style="display: none ;"  ><P id="cadastroErro"  ></P> </div>
                 <span class="vermelho">Nome :</span>
                 <input type="text" placeholder="SeuNome" id="input_nome" >     
                 <div class="erro" style="display: none ;" id="erroNome1" ><P id="erroNome"  ></P> </div>
@@ -62,13 +65,14 @@
 
                 <div class="box">
                     <button class="btn" onclick="proximo()">Proximo</button>
+                   
                 </div>
             </div>
             
-            <div class="formulario" id="formularioFIlme" style="display: none ;" >
+             <div class="formulario" id="formularioFIlme"  >
                 <div class="erro" style="display: none ;" ><P id="erroCadastroFilme" ></P> </div>
                 <label for="" class="vermelho">Slasher</label>
-                <select name="" id="Slasher" class="vermelho">
+                <select name="" id="Slasher" class="vermelho" >
                     <option></option>
                     <option value="O Massacre da Serra Eletrica">O Massacre da Serra Eletrica</option>
                     <option value="Panico">Panico</option>
@@ -76,8 +80,8 @@
                     <option value="halloween">halloween</option>
                     <option value="O Brinquedo Assassino">O Brinquedo Assassino</option>
                 </select>
-                <label for="" class="verde">Aliens</label>
-                <select name="" id="Alien">
+                <label for="" class="verde" >Aliens</label>
+                <select name="" id="Alien"  >
                     <option></option>
                     <option value="Alien">Alien</option>
                     <option value="Predator">Predator </option>
@@ -86,7 +90,7 @@
                     <option value="Guerra dos Mundos">Guerra dos Mundos</option>
                 </select>
                 <label for="" class="vermelho">Trash</label>
-                <select name="" id="Trash">
+                <select name="" id="Trash"  >
                     <option></option>
                     <option value="Evil Dead 2">Evil Dead 2</option>
                     <option value="Fome Animal"> Fome Animal </option>
@@ -95,7 +99,7 @@
                     <option value="Re-Animator">Re-Animator</option>
                 </select>
                 <label for="" class="vermelho">Fantasma</label>
-                <select name="" id="Fantasma">
+                <select name="" id="Fantasma"  >
                     <option></option>
                     <option value="Invocação do Mal">Invocação do Mal</option>
                     <option value="O Grito">O Grito </option>
@@ -103,7 +107,7 @@
                     <option value="O Exorcista">O Exorcista</option>
                     <option value="A  Hora do Pesadelo">A  Hora do Pesadelo</option>
                 </select>
-                <label for="" class="vermelho">Zumbi</label>
+                <label for="" class="vermelho"  >Zumbi</label>
                 <select name="" id="Zumbi">
                     <option></option>
                     <option value="Madrugada dos Mortos">Madrugada dos Mortos</option>
@@ -119,7 +123,7 @@
         </div>
 
 </div>
-</div>
+</div> 
 
     <div class="footer">
         <div class="container">

@@ -10,21 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Nosifer&display=swap" rel="stylesheet">
     <title>dash</title>
 </head>
-<body>
+<body  id="loading" >
 
-<div class="navbar">
-    <div class="menu">
+<div class="navbar" id="navbar">
+    <div class="menu" id="menu">
     <img src="https://38.media.tumblr.com/42cc6e5d65a7312b6d890ab416d2946c/tumblr_nvj8jkExtn1rewagfo1_500.gif" alt="">
     <h1 class="vermelho"> Bem Vindo </h1>
     <h1 class="cliente">cliente</h1>
         <ul>
             <button class="btn">Filmes</button>
             <button class="btn">Grafico</button>
-            <button class="btnSair" >sair</button>
+            <button class="btnSair" onclick="sair()" >sair</button>
         </ul>
     </div>
 </div>
-<div class="alert">
+<div class="alert" id="alerta">
     <div class="aviso">
         <div class="classico">
             <h2> 5 <br> estrelas  </h2>
@@ -37,15 +37,41 @@
         </div>
     </div>      
 </div>
-<div class="box">
+<div class="box" id="box">
          <div class="imagem"><img src="https://br.web.img2.acsta.net/pictures/210/444/21044499_20130926200315787.jpg" alt="" ><span class="vermelho">o massacre da serra elerica</span></div>
-         <div class="imagem"><img src="https://media.fstatic.com/VYWqsmX_XnmL8QZi73MSmdyKT0Y=/210x312/smart/media/movies/covers/2018/10/evil-dead-2.jpg" alt="" ></div>
-         <div class="imagem"><img src="https://i.pinimg.com/474x/37/13/b2/3713b24819e32722e6defedbfec60c07.jpg" alt="" > </div>
-
+         
 
 </div>
+</div>
+
+<script>
+    function sair(){
 
 
+        loading.style.backgroundImage = 'url(https://i.makeagif.com/media/10-19-2015/Fmw3yd.gif) no-repeat'
+        
+        navbar.style.display ='none'
+        menu.style.display ='none'
+        box.style.display ='none'
+        alerta.style.display ='none'
+
+
+
+        setTimeout(function () {
+          
+            
+                    window.location = "../login.html";
+
+                }, 4000);// apenas para exibir o loading
+
+            };
+
+
+    
+
+
+
+</script>
 
 
 

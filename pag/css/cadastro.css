@@ -61,11 +61,12 @@ p{
     display: flex;
     flex-direction: column;
     color: white;
-    border: solid gold;
-    height: 200px;
+    
+    height: 60px;
     width: 600px;
 
 }
+
 
 /*header*/
 .container{
@@ -204,7 +205,7 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 760px;
+    height: 660px;
     width: 500px;
     padding: 5px;
     gap: 10px;
@@ -228,6 +229,7 @@ p{
     
    
 }
+
 .erroCadastro{
     color: rgb(255, 255, 255);
     height: 40px;
@@ -236,6 +238,8 @@ p{
     margin-top: -60px;
     align-items: center;
     margin-left: 800px;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn   {
@@ -256,12 +260,23 @@ p{
 }
 
   /*footer*/
-.footer .container h3 {
+.footer .container  {
     background-color: rgb(0, 0, 0);
     color: white;
-    height: 100px;
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;  
+    
+  }
+  span{
+    background-color: #000000;
+    color: white;
+    height: 100px;
+    width: 1500px;
+    margin-left: 200px;
+    text-align: center;
+    justify-content: center;
+ 
+    
   }

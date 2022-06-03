@@ -46,6 +46,9 @@ body {
     align-items: center;
     text-align: center;
   }
+  a{
+    text-decoration: none;
+  }
   .cliente {
     display: flex;
     flex-direction: column;
@@ -204,7 +207,11 @@ body {
     width: 300px;
     border-radius: 10px;
     border: solid gold;
-    
+  }
+  .img:hover{
+    transform: scale(1.1);
+    transition: all 1.5s;
+
   }
   .filme{
     justify-content: center;
@@ -223,6 +230,39 @@ body {
     width: 100%;
     margin-top: 300px;
   }
+  .seta{
+    font-size: 70px;
+    color: red;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40px;
+    border-radius: 5px;
+  }
+  .seta:hover{
+    color: white;
+  }
+  .setaTopo{
+    font-size: 70px;
+    color: red;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30px;
+    margin-top: 20px;
+  }
+  .linkTop  {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 60px;  
+    background-color: rgba(0, 0, 0, 0.652); 
+    border-radius: 5px;
+    border: red solid;
+    
+    
+}
   h3 span{
     background-color: #000000;
     color: white;
