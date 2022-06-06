@@ -31,8 +31,8 @@ function validarSenha() {
     erro3.style.display = ""
     erroSenha.innerHTML = " senha invalida";
     erroSenha.style.color = "red"
-  } 
-   if (senha.length < 8) {
+  }
+  if (senha.length < 8) {
     input_senha.style.border = "red  solid 5px"
     erro3.style.display = ""
     erroSenha.innerHTML = " senha fraca ";
@@ -54,7 +54,7 @@ function ConfirmaSenha() {
     erro5.style.display = ""
     ConfirmaErroSenha.innerHTML = " senha invalida";
     ConfirmaErroSenha.style.color = "red"
-  } 
+  }
   if (senha != confirmarSenha) {
     input_ConfirmaSenha.style.border = "red  solid 5px"
     erro4.style.display = ""
@@ -70,7 +70,7 @@ function ConfirmaSenha() {
     return false;
   }
 }
-function proximo(){
+function proximo() {
   var nome = input_nome.value;
   var email = email_input.value;
   var senha = input_senha.value;
@@ -78,7 +78,7 @@ function proximo(){
 
   if (nome == "" && email == "" && senha == "" && confirmaSenha == "") {
     // alert("preencha os campos")
-      Swal.fire({
+    Swal.fire({
       icon: 'error',
       title: 'erro no cadastro',
       text: 'Campos em branco',
@@ -86,8 +86,8 @@ function proximo(){
       color: 'red',
       background: 'black',
       width: 450,
-      height:450,
-      
+      height: 450,
+
     })
 
     input_nome.style.border = "red  solid 5px"
@@ -95,18 +95,73 @@ function proximo(){
     input_senha.style.border = "red  solid 5px"
     input_ConfirmaSenha.style.border = "red  solid 5px"
 
-  }else {
-    
-  formularioFIlme.style.display = "";
-  formulario1.style.display = "none"
+  } else {
+
+    formularioFIlme.style.display = "";
+    formulario1.style.display = "none"
   }
 }
+function bloquandocadastro() {
+  var inputContador = 0;
+  var Slasherfilme = document.getElementById("Slasher")
+  var Alienfilme = document.getElementById("Alien")
+  var Trashfilme = document.getElementById("Trash")
+  var Fantasmafilme = document.getElementById("Fantasma")
+  var Zumbifilme = document.getElementById("Zumbi")
+  var lista = []
+  var listatodos = ['Slasher', 'Alien', 'Trash', 'Fantasma', 'Zumbi']
+  if (Slasherfilme.value != '') {
+    lista.push('Slasher')
+    inputContador++
+  }
+  if (Alienfilme.value != '') {
+    lista.push('Alien')
+    inputContador++
+  }
+  if (Trashfilme.value != '') {
+    lista.push('Trash')
+    inputContador++
+  }
+  if (Fantasmafilme.value != '') {
+    lista.push('Fantasma')
+    inputContador++
+  }
+  if (Zumbifilme.value != '') {
+    lista.push('Zumbi')
+    inputContador++
+  }
+  if (inputContador > 2) {
+    Swal.fire({
+      icon: 'error',
+      title: 'limite excedido',
+      text: 'maximo de filme selecionado',
+      color: 'red',
+      color: 'red',
+      background: 'black',
+      width: 450,
+      height: 450,
+
+    })
+    for (var contador = 0; contador < lista.length; contador++) {
+      var filmeAtual = document.getElementById(lista[contador])
+
+      for (var i = 0; i < listatodos.length; i++) {
+        var Atual = document.getElementById(listatodos[i])
+
+        if (filmeAtual != Atual && Atual.value == "") {
+          Atual.disabled = true
+        }
 
 
+      }
+    }
 
+  }
+
+}
 function cadastro() {
-    
-  
+
+
   var nome = input_nome.value;
   var email = email_input.value;
   var senha = input_senha.value;
@@ -116,13 +171,13 @@ function cadastro() {
   var Fantasmafilme = Fantasma.value;
   var Zumbifilme = Zumbi.value;
 
- 
 
-  if (nome == ""  && email == "" && senha == "" &&  Slasherfilme == "" && Alienfilme == "" && Trashfilme == "" && Fantasmafilme == "" && Zumbifilme == "") {
-    
-    
-   
-  
+
+  if (nome == "" && email == "" && senha == "" && Slasherfilme == "" && Alienfilme == "" && Trashfilme == "" && Fantasmafilme == "" && Zumbifilme == "") {
+
+
+
+
     return false;
   } else {
 
@@ -134,9 +189,9 @@ function cadastro() {
       body: JSON.stringify({
 
         nomeServer: nome,
-        emailServer: email, 
+        emailServer: email,
         senhaServer: senha,
-      
+
 
         SlasherServer: Slasherfilme,
         AlienServer: Alienfilme,
@@ -148,26 +203,28 @@ function cadastro() {
       }),
     })
       .then(function (resposta) {
-        console.log('resposta: ', resposta);
-
+        console.log('resposta:', resposta);
         if (resposta.ok) {
+          Swal.fire({
+            icon: 'sucesso',
+            title: 'cadastro realizado com sucesso',
+            text: '',
+            color: 'green',
+            background: 'black',
+            timer: 1500,
+            width: 450,
+            height: 450,
+            time:2500
+          })
+         
           setTimeout(() => {
+           
             window.location = "login.html";
           }, "2000")
 
         } else {
-          Swal.fire({
-            icon: 'error',
-            title: 'erro',
-            text: 'escolha pelo menos 1 filme',
-            color: 'red',
-            color: 'red',
-            background: 'black',
-            width: 450,
-            height:450,
-            
-          })
-         
+          
+
           // alert('Houve um erro ao realizar o cadastro');
           throw 'Houve um erro ao tentar realizar o cadastro!';
         }
@@ -180,36 +237,35 @@ function cadastro() {
   }
 
 }
-
-  function  FilmeSlasher(){
-    Slasher.style.display = ''
-    divContainer.style.display = 'none'  
-  }
-  function slasher(){
-    Slasher.style.display = 'none'
-    divContainer.style.display = ''
-  }
-  function filmesTrash(){
-    filmeTrash.style.display = 'none'
-    trashProximo.style.display = ''
-  }
-  function trash() {
-    filmeTrash.style.display = ''
-    trashProximo.style.display = 'none'
-  }
-  function FilmesFantasma(){
-    filmeFantasma.style.display = 'none'
-    fantasmaProximo.style.display = ''
-  }
-  function fantasma(){
-    filmeFantasma.style.display = ''
-    fantasmaProximo.style.display = 'none'
-  }
-  function Filmeszumbi(){
-    filmeZumbi.style.display = 'none'
-    proximozumbi.style.display = ''
-  }
- function zumbi(){
+function FilmeSlasher() {
+  Slasher.style.display = ''
+  divContainer.style.display = 'none'
+}
+function slasher() {
+  Slasher.style.display = 'none'
+  divContainer.style.display = ''
+}
+function filmesTrash() {
+  filmeTrash.style.display = 'none'
+  trashProximo.style.display = ''
+}
+function trash() {
+  filmeTrash.style.display = ''
+  trashProximo.style.display = 'none'
+}
+function FilmesFantasma() {
+  filmeFantasma.style.display = 'none'
+  fantasmaProximo.style.display = ''
+}
+function fantasma() {
+  filmeFantasma.style.display = ''
+  fantasmaProximo.style.display = 'none'
+}
+function Filmeszumbi() {
+  filmeZumbi.style.display = 'none'
+  proximozumbi.style.display = ''
+}
+function zumbi() {
   filmeZumbi.style.display = ''
   proximozumbi.style.display = 'none'
- }
+}

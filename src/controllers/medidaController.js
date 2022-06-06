@@ -20,8 +20,6 @@ function buscarUltimasMedidas(req, res) {
         res.status(500).json(erro.sqlMessage);
     });
 }
-
-
 function buscarMedidasEmTempoReal(req, res) {
 
     var idAquario = req.params.idAquario;

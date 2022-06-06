@@ -23,7 +23,6 @@ function listar(req, res) {
             }
         );
 }
-
 function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -59,7 +58,6 @@ function entrar(req, res) {
     }
 
 }
-
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
@@ -70,7 +68,7 @@ function cadastrar(req, res) {
     var Trash =req.body.trashServer;
     var Fantasma =req.body.FantasmaServer;
     var Zumbi =req.body. ZumbiServer;
-
+    
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -109,6 +107,7 @@ function cadastrar(req, res) {
             );
     }
 }
+
 
 module.exports = {
     entrar,

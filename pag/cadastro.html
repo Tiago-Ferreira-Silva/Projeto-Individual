@@ -17,22 +17,22 @@
 <body>
     <div class="header">
         <div class="container">
-            <img src="https://media4.giphy.com/media/hvLjmIbptd5dOZeHQC/giphy.gif" alt="">
+            <img src="imagem/logo.webp" alt="">
             <div class="navbar">
                 <ul>
                     <li><a href="index.html"class="vermelho">Home</a></li>
-                    <li><a href="filmes.html"class="vermelho">Filmes</a> </li>
+                    <li><a href="sobre.html"class="vermelho">Sobre</a> </li>
                     <li ><a href="cadastro.html" class="borda">Cadastro</a></li>
                     <li><a href="login.html"class="vermelho">Login</a></li>
                 </ul>
             </div>
-            <img src="https://media4.giphy.com/media/hvLjmIbptd5dOZeHQC/giphy.gif" alt="">
+            <img src="imagem/logo.webp" alt="">
         </div>
     </div>
     </div>
     <div class="container">
         <div class="">
-        <img src="https://pa1.narvii.com/6352/bb85716a4d1d945a470a16dc202f4f3032b28043_hq.gif" alt="" class="imgpg">
+        <img src="imagem/navbar.gif" alt="" class="imgpg">
             <h1 class="vermelho">Nitght of Terror <br>
             O Melhor Site <br>
             de Terror</h1>
@@ -45,7 +45,7 @@
    
         <div class="card">
             
-            <div class="formulario" id="formulario1" style="display: none ;">
+            <div class="formulario" id="formulario1" >
                 <div class="erro" id="erro6" style="display: none ;"  ><P id="cadastroErro"  ></P> </div>
                 <span class="vermelho">Nome :</span>
                 <input type="text" placeholder="SeuNome" id="input_nome" >     
@@ -69,10 +69,10 @@
                 </div>
             </div>
             
-             <div class="formulario" id="formularioFIlme"  >
+             <div class="formulario" id="formularioFIlme"  style="display: none ;" >
                 <div class="erro" style="display: none ;" ><P id="erroCadastroFilme" ></P> </div>
                 <label for="" class="vermelho">Slasher</label>
-                <select name="" id="Slasher" class="vermelho" >
+                <select name="" id="Slasher" class="vermelho" onchange="bloquandocadastro()">
                     <option></option>
                     <option value="O Massacre da Serra Eletrica">O Massacre da Serra Eletrica</option>
                     <option value="Panico">Panico</option>
@@ -81,7 +81,7 @@
                     <option value="O Brinquedo Assassino">O Brinquedo Assassino</option>
                 </select>
                 <label for="" class="verde" >Aliens</label>
-                <select name="" id="Alien"  >
+                <select name="" id="Alien"  onchange="bloquandocadastro()" >
                     <option></option>
                     <option value="Alien">Alien</option>
                     <option value="Predator">Predator </option>
@@ -90,7 +90,7 @@
                     <option value="Guerra dos Mundos">Guerra dos Mundos</option>
                 </select>
                 <label for="" class="vermelho">Trash</label>
-                <select name="" id="Trash"  >
+                <select name="" id="Trash"  onchange="bloquandocadastro()" >
                     <option></option>
                     <option value="Evil Dead 2">Evil Dead 2</option>
                     <option value="Fome Animal"> Fome Animal </option>
@@ -99,7 +99,7 @@
                     <option value="Re-Animator">Re-Animator</option>
                 </select>
                 <label for="" class="vermelho">Fantasma</label>
-                <select name="" id="Fantasma"  >
+                <select name="" id="Fantasma"   onchange="bloquandocadastro()">
                     <option></option>
                     <option value="Invocação do Mal">Invocação do Mal</option>
                     <option value="O Grito">O Grito </option>
@@ -108,7 +108,7 @@
                     <option value="A  Hora do Pesadelo">A  Hora do Pesadelo</option>
                 </select>
                 <label for="" class="vermelho"  >Zumbi</label>
-                <select name="" id="Zumbi">
+                <select name="" id="Zumbi" onchange="bloquandocadastro()">
                     <option></option>
                     <option value="Madrugada dos Mortos">Madrugada dos Mortos</option>
                     <option value="Exterminio ">Exterminio </option>

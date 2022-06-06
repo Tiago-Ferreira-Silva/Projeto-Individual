@@ -1,0 +1,153 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Nosifer', cursive;
+    background-color: aliceblue;
+}
+
+
+a{
+    text-decoration: none;
+    color: red;
+}
+p{
+    color: white;
+}
+/*header*/
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    text-align: center;
+    margin-top: -80px;
+    margin-bottom: 100px;
+    
+}
+h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 35px;
+}
+img{
+    position: relative; 
+    height: 30vh;
+    width: 300px;
+    margin-bottom: 100px;
+}
+span{
+    font-size: 10px;
+    color: white;
+    border: solid gold;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 500px;
+    padding: 0px;
+    height: 100px;
+  }
+.cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    margin-top: 100px;
+    
+}.btn {
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    border: solid rgb(147, 147, 147);
+    font-size: 20px;
+    margin-top: -80px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+    background-color: white;
+    color: red;
+
+}
+.btn:hover {
+    transform: scale(1.1);
+    transition: all 1.5s;
+    background-color: red;
+    color: white;
+}
+
+.btnSair {
+    align-items: center;
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+    border: solid rgb(3, 3, 3);
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: -17px;
+    background-color: white;
+    color: red;
+}
+
+.btnSair:hover {
+    transform: scale(1.1);
+    transition: all 1.5s;
+    background-color: red;
+    color: white;
+}
+
+.vermelho:hover {
+    color: red;
+}
+.menu{
+    position: fixed;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    width: 300px;
+    background-color: #000000; 
+    padding: 20PX;
+    
+    
+}
+.container{
+   
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    width: 800px;
+    margin-left: 600px;
+}
+.maisGrafico{
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: solid red;
+    font-size: 20px; 
+    margin-top: 10px;
+    margin-left: 830px;
+    background-color: white;
+    color: red;
+}
+.maisGrafico:hover{
+    background-color: red;
+    color: white;
+    border: solid white;
+}
+.grafico{
+    color: red;
+    width: 1200px;
+    display: flex;
+    margin-left: 300px;
+    font-size: 10px;
+}

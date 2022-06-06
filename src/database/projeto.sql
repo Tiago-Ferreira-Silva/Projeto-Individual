@@ -3,7 +3,7 @@ use projeto ;
 
 create table  filme (
 idFilme int primary key auto_increment,
-favorito varchar(45),
+nome varchar(45),
 lancamento date,
 diretor varchar(45) 
 );
@@ -13,16 +13,19 @@ IdUsuario int primary key auto_increment,
 nome varchar(45),
 email varchar(45), 
 senha varchar(45),
-filme varchar(45)
+Slasher varchar(45),
+Alien varchar(45),
+Trash varchar(45),
+Fantasma varchar(45),
+Zumbi varchar(45)
 );
 create table critica(
-idCritica int ,
+idCritica int primary key  auto_increment  ,
 fkFilme int,
 foreign key (fkFilme) references filme(idFilme),
 fkUsuario int ,
 foreign key  (fkUsuario) references usuario(idUsuario),
-primary key  (fkFilme, fkUsuario, idCritica), 
-avaliacaoCritica char(1),
+NomeFilme varchar(255),
 avaliacaoUsuario char(10)
 );
 
@@ -51,38 +54,41 @@ insert into  filme value
 (null,'Madrugada dos Mortos','2004-10-12','Zack Snyder'),
 (null,'Extermínio','2002-08-01','Danny Boyle'),
 (null,'REC','2007-09-30',' Jaume Balagueró'),
-(null,'‎Resident Evil','2002-04-13','Paul W. S. Anderson'),
+(null,'Resident Evil','2002-04-13','Paul W. S. Anderson'),
 (null,'Guerra mundial z','2013-08-10','Marc Forster');
 
 
-insert into  usuario value 
-(null,'tiago','tiago@silva',1),
-(null,'vivi','vivi@franca',3),
-(null,'gabriel','gabriel@mello',4),
-(null,'bebelle','bebelle@bebelle',5),
-(null,'kay ','kay@kay',7),
-(null,'larissa','larissa@larissa',6),
-(null,'laura','laura@laura',8),
-(null,'limbert','limbert@limbert',9),
-(null,'vlady','vlady@vlady',10),
-(null,'marcos','marcos@marcos',18),
-(null,'paula','paula@paula',20),
-(null,'emy','emy@emy',1),
-(null,'edy','edy@edy',1),
-(null,'naty','naty',3),
-(null,'may','may@may',15);
+
+ 
+
+
+
 
 insert into critica value 
-(1,5,1,5,5),
-(2,4,2,4,4),
-(3,9,3,1,1),
-(4,3,4,3,3),
-(5,2,5,2,2),
-(6,10,6,1,1),
-(7,21,7,1,1),
-(8,25,8,1,1),
-(9,11,9,5,5),
-(10,12,10,5,5);
+(1,5,4,4),
+(2,4,4,3),
+(3,9,4,3),
+(4,3,4,2),
+(5,2,4,1),
+(6,10,4,3),
+(1,5,4,4),
+(2,4,4,5),
+(3,9,4,1),
+(4,3,4,2),
+(5,2,4,1),
+(6,10,4,2);
+
+insert into critica value 
+(1,5,1,5),
+(2,4,1,4),
+(3,9,1,1),
+(4,3,1,3),
+(5,2,1,2),
+(6,10,1,1),
+(7,21,1,1),
+(4,17,1,1),
+(9,11,1,5),
+(10,12,1,5);
 
 
 
@@ -90,16 +96,47 @@ select * from  filme;
 select * from  usuario;
 select * from  critica;
 
-select * from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme; 
+alter table critica add column NomeFilme varchar(255);
 
-select usuario.nome , filme.favorito from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme; 
+select avg(avaliacaoUsuario) from critica group by nomeFilme = 'Predator';
 
-select critica.avalicaoCritica from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme ;
+-- exibindo os filmes favoritos dos usuarios
+select * from usuario join filme on idUsuario = idFilme;
+ 
 
-select critica.avaliacaoCritica , filme.favorito from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme where  critica.avaliacaoCritica = 5; 
+ -- exibindo todos os filmes lançamentos e diretores 
+ select filme.nome,filme.lancamento,filme.diretor from filme;
+ 
+-- exibindo os filmes favoritos dos usuarios e as avaliações
+select * from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme ;
 
-select critica.avaliacaoCritica ,critica.avaliacaoUsuario , filme.favorito from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme where  critica.avaliacaoCritica = 1;
+-- exibindo os filmes trash favoritos e as notas dos usuario
+select usuario.trash ,critica.avaliacaoUsuario from usuario join critica on idUsuario = fkUsuario;
 
-select usuario.nome , filme.favorito , filme.diretor, critica.avaliacaoUsuario , critica.avaliacaoCritica  from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme where  critica.avaliacaoCritica = 5;
+-- exibindo os filmes slasher favoritos e as notas dos usuario
+select usuario.slasher ,critica.avaliacaoUsuario from usuario join critica on idUsuario = fkUsuario;
 
-select usuario.nome , filme.favorito , filme.diretor from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme where  critica.avaliacaoCritica = 1;
+-- exibindo os filmes fantasma favoritos e as notas dos usuario
+select usuario.fantasma ,critica.avaliacaoUsuario from usuario join critica on idUsuario = fkUsuario;
+
+-- exibindo o nome dos filmes com avaliação 5 estrela
+select critica.avaliacaoUsuario , filme.nome  from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme where  critica.avaliacaoUsuario = 5; 
+
+-- exibindo o nome dos filmes com avaliação 1 estrela
+select critica.avaliacaoUsuario ,  filme.nome from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme where  critica.avaliacaoUsuario = 1;
+
+-- exibindo o nome dos filmes diretores e data de lançamento
+select  filme.nome , filme.diretor, filme.lancamento  from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme ;
+
+-- exibindo a data dos  filme favoritos dos clientes 
+select  filme.nome , filme.diretor, filme.lancamento from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme group by lancamento;
+
+
+-- exibindo os nomes dos filmes com maior e menor nota 
+select filme.nome , max(avaliacaoUsuario) as 'Maior Notas', min(avaliacaoUsuario) as 'Menor Nota'  
+from usuario join critica  on idUsuario = fkUsuario join  filme on idFilme = fkFilme  group by nome ;
+
+
+
+
+

@@ -11,6 +11,9 @@ a{
     text-decoration: none;
     color: red;
 }
+p{
+    color: white;
+}
 /*header*/
 
 h1 {
@@ -39,15 +42,32 @@ img{
     margin-bottom: 100px;
 }
 span{
-    font-size: 30px;
+    font-size: 10px;
     color: white;
-    height: 100px;
-    width: 200px;
     display: flex;
+    text-align: center;
+    justify-content: space-between;
     flex-direction: column;
-
-    align-items: center;
+    margin-top: 500px;
+    padding: 0px;
+    height: 100px;
   }
+select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+}
+option{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+   
+   
+    
+}
 .cliente {
     display: flex;
     flex-direction: column;
@@ -58,7 +78,8 @@ span{
     font-size: 25px;
     margin-top: 100px;
     
-}.btn {
+}
+.btn {
     align-items: center;
     height: 50px;
     width: 180px;
@@ -118,7 +139,6 @@ span{
     width: 75%;
     position: relative;
     margin-left: 300px;
-  
     margin-top: -800px;
     width: 95%;
     display: flex;
@@ -178,24 +198,30 @@ span{
     border-radius: 10px;
     display: flex;
     background-color:rgba(13, 13, 13, 0.729);  
+    
 }
 .box span{
-
-    margin-top: -300px;
-    margin-left: 400px;
-    width: 800px;
+    align-items: center;
+    align-self: center;
     font-size: 33px;
+    position: relative;
+    margin-left: -10px;
+    max-width: 300px;
+    margin-bottom: 30px;
+
+    
     
 }
 .imagem img {
-    height: 490px;
-    width: 360px;
+    height: 430px;
+    width: 300px;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    border: solid blue;
     position: absolute;
-    margin-top: -360px;
-    margin-left: 20px;
+    padding: 50px;
+    
 }
 
 
@@ -204,11 +230,67 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6px;  
+     
     color: white;
 }
 .filme:hover{
     transition: all 1.5s;
     color: red;
-    border-bottom: red solid;
+    
 }
+.Trailer{
+    width: 400px;
+    height: 250px;
+    margin-left: -1173px;
+    margin-top: 520px;
+}
+.container{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    margin-left: 100px;
+}
+.colum{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    max-height: 780px;
+    margin-left: -100px;
+    min-width: 400px;
+    
+}
+.avaliar{
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    border: solid red;
+    font-size: 20px;
+    background-color: white;
+    color: red;
+   
+    margin-bottom: 30px;
+}
+.rank{
+    align-items: center;
+    align-self: center;
+    height: 80px;
+    width: 180px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: red solid;
+    margin-left: 30px;
+    background-color: white;
+    color: red;
+  
+}
+.rank:hover{
+    transition: all 1.5s;
+    color: white;
+    background-color: red;
+    border: white solid;
+}
+
